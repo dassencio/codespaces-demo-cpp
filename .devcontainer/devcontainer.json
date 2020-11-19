@@ -7,17 +7,23 @@
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
 	// Settings to be applied to Visual Studio Code.
-	"settings": { 
+	"settings": {
+		"cmake.sourceDirectory": "${workspaceFolder}/src",
 		"terminal.integrated.shell.linux": "/bin/bash",
+		"files.associations": {
+			"zengithub.h": "c"
+		},
 		"C_Cpp.default.includePath": [
 			"~/.conan/data/**",
 			"${default}"
 		],
+		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 	},
 
 	// Visual Studio Code extensions (plugins) to be installed.
 	"extensions": [
-		"ms-vscode.cpptools"
+		"ms-vscode.cpptools",
+		"ms-vscode.cmake-tools"
 	],
 
 	// Command to be executed after the container is created.

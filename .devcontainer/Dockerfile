@@ -9,7 +9,8 @@ RUN apt-get update && \
 RUN pip3 install conan --no-cache-dir
 
 # Add conan remote repository where the ZenGitHub package is stored.
-RUN conan remote add conan-jonico https://api.bintray.com/conan/conan-jonico/libzengithub
+RUN conan config set general.revisions_enabled=True && \
+    conan remote add conan-jonico https://jonico.jfrog.io/artifactory/api/conan/libzengithub-conan
 
 # Pre-install all project dependencies using conan.
 COPY . /tmp/repo

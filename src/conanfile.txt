@@ -1,6 +1,7 @@
 [requires]
 ZenGitHub/1.0@jonico/stable
-libgit2/0.26.0@jonico/stable
+libgit2/1.1.0
+openssl/1.1.1j
 
 [generators]
 cmake

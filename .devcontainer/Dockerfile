@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/cpp:debian-10
+FROM mcr.microsoft.com/vscode/devcontainers/cpp:debian-11
 
 # Install additional system packages.
 RUN apt-get update && \
